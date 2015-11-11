@@ -383,3 +383,50 @@ case xxx: 后面必须跟语句或者break，否者这个case不成立，条件�
 	}
 	
 
+## 函数
+
+描述不好使，直接举例
+
+### 无参数无返回值函数
+
+    func sayHello(){
+        print("hello")
+    }
+    
+    // 调用方法
+    self.sayHello()
+    
+###  单参无返回值函数
+
+    func sayHello(name:String){
+        print("hello,\(name)")
+    }
+    
+	// 调用方法
+    self.sayHello("du")
+    
+### 多参无返回函数   
+
+    func sayHello(name:String, age:Int){
+        print("name:\(name),age:\(age)")
+    }
+    
+    // 调用方法
+    self.sayHello("du",age:26) // 首个参数的参数名可以省略，后面的参数要加上参数名
+
+### 返回一个值函数
+
+	func sayHello(name:String)->Int{
+		return 10
+    }
+    
+    // 调用方法
+    print("age:\(self.getAge())")
+    
+### 返回元组的函数（多个值）
+
+    func giveMeFive()->(one:String,two:String,three:String){
+        return ("one","two","three")
+    }
+    // 调用方式
+	var give = self.giveMeFive()
