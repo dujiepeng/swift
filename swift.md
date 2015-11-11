@@ -226,12 +226,12 @@
 	let someCharacter: Character = "e"
 	switch someCharacter {
 	case "a", "e", "i", "o", "u":
-    	println("\(someCharacter) is a vowel")
+    	print("\(someCharacter) is a vowel")
 	case "b", "c", "d", "f", "g", "h", "j", "k", "l", "m",
 	"n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z":
-	    println("\(someCharacter) is a consonant")
+	    print("\(someCharacter) is a consonant")
 	default:
-    	println("\(someCharacter) is not a vowel or a consonant")
+    	print("\(someCharacter) is not a vowel or a consonant")
 	}
 	// 输出 "e is a vowel"
 	
@@ -245,9 +245,9 @@ case xxx: 后面必须跟语句或者break，否者这个case不成立，条件�
 	switch anotherCharacter {
 	case "a":
 	case "A":
-    	println("The letter A")
+    	print("The letter A")
 	default:
-    	println("Not the letter A")
+    	print("Not the letter A")
 	}
 	// this will report a compile-time error
 
@@ -256,9 +256,9 @@ case xxx: 后面必须跟语句或者break，否者这个case不成立，条件�
 	let anotherCharacter: Character = "a"
 	switch anotherCharacter {
 	case "a","A":
-    	println("The letter A")
+    	print("The letter A")
 	default:
-    	println("Not the letter A")
+    	print("Not the letter A")
 	}
 
 
@@ -284,7 +284,7 @@ case xxx: 后面必须跟语句或者break，否者这个case不成立，条件�
 	default:
     	naturalCount = "millions and millions of"
 	}
-	println("There are \(naturalCount) \(countedThings).")
+	print("There are \(naturalCount) \(countedThings).")
 	// 输出 "There are millions and millions of stars in the Milky Way."
 	
 ##### 	元组（Tuple）
@@ -294,15 +294,15 @@ case xxx: 后面必须跟语句或者break，否者这个case不成立，条件�
 	let somePoint = (1, 1)
 	switch somePoint {
 	case (0, 0):
-    	println("(0, 0) is at the origin")
+    	print("(0, 0) is at the origin")
 	case (_, 0):
-    	println("(\(somePoint.0), 0) is on the x-axis")
+    	print("(\(somePoint.0), 0) is on the x-axis")
 	case (0, _):
-    	println("(0, \(somePoint.1)) is on the y-axis")
+    	print("(0, \(somePoint.1)) is on the y-axis")
 	case (-2...2, -2...2):
-    	println("(\(somePoint.0), \(somePoint.1)) is inside the box")
+    	print("(\(somePoint.0), \(somePoint.1)) is inside the box")
 	default:
-    	println("(\(somePoint.0), \(somePoint.1)) is outside of the box")
+    	print("(\(somePoint.0), \(somePoint.1)) is outside of the box")
 	}
 	// 输出 "(1, 1) is inside the box"
 	
@@ -313,11 +313,11 @@ case xxx: 后面必须跟语句或者break，否者这个case不成立，条件�
 	let anotherPoint = (2, 0)
 	switch anotherPoint {
 	case (let x, 0):
-    	println("on the x-axis with an x value of \(x)")
+    	print("on the x-axis with an x value of \(x)")
 	case (0, let y):
-    	println("on the y-axis with a y value of \(y)")
+    	print("on the y-axis with a y value of \(y)")
 	case let (x, y): // 这个case，是匹配所有...
-    	println("somewhere else at (\(x), \(y))")
+    	print("somewhere else at (\(x), \(y))")
 	}
 	// 输出 "on the x-axis with an x value of 2"
 	
@@ -364,7 +364,7 @@ case xxx: 后面必须跟语句或者break，否者这个case不成立，条件�
 	default:
 	    description += " an integer."
 	}
-	println(description)
+	print(description)
 	// 输出 "The number 5 is a prime number, and also an integer."
 
 ##### 带标签的语句（Labeled Statements）
