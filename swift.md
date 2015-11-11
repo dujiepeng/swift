@@ -89,7 +89,7 @@
 	print (mytuples.1)
 	// 输出：测试文字
 	
-创建元祖的时候，可以给元祖起名，之后直接用名字访问
+创建元组的时候，可以给元组起名，之后直接用名字访问
 
 	let student = (name:"小明",age:12);
 	print("姓名:\(student.name) 年龄:\(student.age)");
@@ -412,7 +412,7 @@ case xxx: 后面必须跟语句或者break，否者这个case不成立，条件�
     }
     
     // 调用方法
-    self.sayHello("du",age:26) // 首个参数的参数名可以省略，后面的参数要加上参数名
+    self.sayHello("du",age:26) // 首个参数的参数名缺省是不写的，后面的参数要加上参数名
 
 ### 返回一个值函数
 
@@ -430,3 +430,40 @@ case xxx: 后面必须跟语句或者break，否者这个case不成立，条件�
     }
     // 调用方式
 	var give = self.giveMeFive()
+	
+### 函数默认值
+这个特性和python很像，可以在定义函数的时候给函数设置默认值，设置后在调用的时候，可以不为这个参数传值
+
+    func join(aJoiner joiner: String = "sss")
+        -> String {
+            return joiner
+    }
+    
+    // 可以调用传值
+    print(self.join("test")) // 输出test
+    
+    // 可以不传值调用
+    print(self.join()) // 输出sss
+    
+### 可变参数
+
+	func arithmeticMean(numbers: Double...) -> Double { // 必须加再最后
+		var total: Double = 0
+		for number in numbers {
+			total += number
+		}
+		return total / Double(numbers.count)
+	}
+	self.arithmeticMean(1, 2, 3, 4, 5)
+	// returns 3.0, which is the arithmetic mean of these five numbers
+	self.arithmeticMean(3, 8, 19)
+	
+### 函数常量形参转为变量形参
+
+函数的形参在函数内是常量，不能被改变，如果需要一种可以改变的，可以用var来定义
+
+    func sayHello(var name:String)->String{ // 加了var，下面再赋值就可用了。
+        name = ""
+        return name
+    }
+	
