@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='常量和变量'/>
+        <page name='整形'/>
+        <page name='浮点数'/>
+        <page name='类型转换'/>
+        <page name='布尔类型'/>
+        <page name='元祖'/>
+        <page name='String'/>
+    </pages>
+</playground>
