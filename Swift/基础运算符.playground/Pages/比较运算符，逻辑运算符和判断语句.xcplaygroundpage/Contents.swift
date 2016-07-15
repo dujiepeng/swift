@@ -27,3 +27,17 @@ var isPasswordOK = false
 
 var isPhoneNumberOK = true
 var isPhoneCodeOK = false
+
+if (isUsernameOK && isPasswordOK) || (isPhoneNumberOK && isPhoneCodeOK) {
+    print("Login success")
+}else {
+    print("Login failed")
+}
+
+
+
+
+
+
+
+
